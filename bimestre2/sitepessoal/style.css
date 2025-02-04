@@ -1,0 +1,82 @@
+/* Definições Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FEFEFE;
+    color: #9C7F84;
+    line-height: 1.6;
+}
+
+/* Cabeçalho e Navegação */
+nav {
+    background-color: #BA5C6A;
+    color: #FEFEFE;
+    padding: 20px;
+    text-align: center;
+}
+
+nav h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+nav a {
+    color: #FEFEFE;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    color: #D5B7AD;
+}
+
+/* Seções */
+section {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+h3 {
+    color: #BA5C6A;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+/* Sobre Mim */
+#sobre-mim img {
+    border-radius: 50%;
+    border: 5px solid #D5B7AD;
+    margin-bottom: 15px;
+}
+
+/* Lista de Curiosidades */
+ol {
+    list-style-type: decimal;
+    margin-left: 20px;
+}
+
+/* Tabela de Educação */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #BA5C6A;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #BA5
+}
