@@ -165,9 +165,6 @@ footer a {
   font-size: 24px;
   margin-top: 10px;
 }
-
-
-
 @media (min-width: 1024px) {
   .card {
     width: 22%;
