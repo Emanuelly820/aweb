@@ -1,0 +1,243 @@
+/* Definição de variáveis globais */
+:root {
+    --cor-principal: #E1EFF2;
+    --cor-secundaria: #8C93A3;
+    --cor-destaque: #E1EFF2;
+    --cor-neutra: #576D7B;
+    --cor-fundo: #18314D;
+    --fonte60: "Imperial Script", serif;
+    
+}
+
+/* Reset de margens e preenchimentos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-destaque);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 10px;
+}
+
+/* HEADER */
+header {
+    grid-column: span 12;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    background-color: var(--cor-principal);
+    height: 100px;
+    padding: 10px 20px;
+}
+
+header .logo {
+    grid-column: span 3;
+}
+
+header .logo p {
+    color: var(--cor-neutra);
+    font-size: 35px;
+}
+
+nav {
+    grid-column: span 9;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+nav a {
+    color: var(--cor-neutra);
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+nav a:hover{
+    color: var(--cor-secundaria);
+    border-top: 2px solid var(--cor-secundaria);
+}
+
+nav a i {
+    font-size: 1.2em;
+}
+.nav-icon {
+    width: 35px; /* Tamanho das imagens */
+    height: 35px;
+    object-fit: contain;
+}
+
+/* HERO */
+.hero {
+    grid-column: span 12;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    height: 100%;
+    margin: 5%;
+}
+
+.hero-text  {
+    grid-column: span 6;
+    text-align: left;
+    font-size: 30px;
+}
+
+.hero-text h1 {
+    font-size: 80px;
+    margin-bottom: 20px;
+    font-family: var(--fonte60);
+    text-shadow: 3px 3px 3px #ababab;
+}
+.hero-text p {
+    margin-top: 10px;
+    font-size: 20px;
+}
+.hero-image {
+    grid-column: span 6;
+    text-align: right;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 40px;
+}
+
+/* SOBRE MIM */
+#sobre-mim {
+    grid-column: 3 / 11; /* Faz com que o conteúdo ocupe 8 colunas no grid */
+    display: grid;
+    align-items: center;
+    width: 100%;
+    margin-top: 100px;
+    text-align: center;
+}
+
+#sobre-mim h2 {
+    text-align: left;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+/* CURIOSIDADES */
+#curiosidades {
+    margin-top: 100px;
+    grid-column: 3 / 11;
+    display: grid;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+
+}
+
+#curiosidades h2 {
+    text-align: left;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.card {
+    background-color: var(--cor-neutra);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* FOOTER */
+footer {
+    grid-column: span 12;
+    background-color: var(--cor-secundaria);
+    padding: 20px;
+    text-align: center;
+    margin-top: 100px;
+    height: 200px;
+    
+}
+
+footer p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+footer i {
+    font-size: 10px;
+}
+footer a{
+    text-decoration: none;
+    color: var(--cor-neutra);
+    
+}
+
+
+/* RESPONSIVIDADE */
+@media (max-width: 1024px) {
+    .hero-text, .hero-image {
+        grid-column: span 12;
+        text-align: center;
+    }
+    
+    .hero {
+        grid-column: span 12;
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    header {
+        grid-template-columns: repeat(12, 1fr);
+        height: auto;
+        padding: 20px;
+    }
+    
+    #sobre-mim, #curiosidades {
+        grid-column: span 12;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    header .logo img {
+        height: 60px;
+    }
+    
+    .hero-image img {
+        max-width: 100%;
+    }
+}
